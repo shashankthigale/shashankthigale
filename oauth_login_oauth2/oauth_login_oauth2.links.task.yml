@@ -1,0 +1,35 @@
+oauth_login_oauth2.config_clc:
+  route_name: oauth_login_oauth2.config_clc
+  title: 'Configure Application'
+  weight: 10
+  base_route: oauth_login_oauth2.customer_setup
+
+oauth_login_oauth2.mapping:
+  route_name: oauth_login_oauth2.mapping
+  title: 'Attribute & Role Mapping'
+  weight: 20
+  base_route: oauth_login_oauth2.customer_setup
+
+oauth_login_oauth2.settings:
+  route_name: oauth_login_oauth2.settings
+  title: 'Sign In Settings'
+  weight: 30
+  base_route: oauth_login_oauth2.customer_setup
+
+oauth_login_oauth2.troubleshoot:
+  route_name: oauth_login_oauth2.troubleshoot
+  title: 'Troubleshoot'
+  weight: 40
+  base_route: oauth_login_oauth2.customer_setup
+
+oauth_login_oauth2.login_reports:
+  route_name: oauth_login_oauth2.login_reports
+  title: 'Login Reports'
+  weight: 50
+  base_route: oauth_login_oauth2.customer_setup
+
+oauth_login_oauth2.customer_setup:
+  route_name: oauth_login_oauth2.customer_setup
+  title: 'Register/Login'
+  weight: 60
+  base_route: oauth_login_oauth2.customer_setup

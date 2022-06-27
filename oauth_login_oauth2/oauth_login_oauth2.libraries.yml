@@ -1,0 +1,26 @@
+oauth_login_oauth2.admin:
+  version: VERSION
+  css:
+    layout:
+      css/oauth_login_oauth2.admin.css: {}
+
+oauth_login_oauth2.style_settings:
+  version: VERSION
+  css:
+    layout:
+      css/oauth_login_oauth2.style_settings.css: {}
+
+oauth_login_oauth2.returnAttribute:
+  version: VERSION
+  js:
+    js/mo-return.js: {}
+
+oauth_login_oauth2.email_username_attribute:
+  version: VERSION
+  js:
+    js/email_username_attribute.js: {}
+
+oauth_login_oauth2.mo_search_field:
+  version: VERSION
+  js:
+    js/mo_search_field.js: {}

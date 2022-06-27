@@ -1,0 +1,217 @@
+.mo_top_bar_button{
+  margin-right: 0 !important;
+}
+
+.mo_top_guide_button{
+  margin-left: 5% !important;
+}
+
+.img-mo-logo{
+  width: 5em;
+  height: 5em;
+  object-fit: contain;
+}
+
+.mo-flex-item {
+  border: 1px solid #ddd;
+  background-color: #f6f6f6;
+  padding: 1% 0 1% 0;
+  display: inline-block;
+  width: 12%;
+  text-align: center;
+  vertical-align: middle;
+  margin: 1%;
+  cursor: pointer;
+}
+
+.mo-flex-item:hover{
+  border: 2px solid navy;
+}
+
+.mo_oauth_pro_icon {
+  float: right;
+  height: 25%;
+  margin: -5% 3% 0 0;
+  width: 21%;
+}
+
+.mo_oauth_pro_icon1 {
+  height: 4%;
+  width: 3%;
+}
+
+.mo_pro_icon{
+  margin: 0 0 0 1%;
+}
+
+.mo_oauth_list_disabled{
+  margin: 0 0 0 20%;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.mo-wrap {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 98%;
+}
+
+.mo-flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  border: none;
+}
+
+.mo-select-app {
+  width:32%;
+}
+
+.mo-select-app-margin {
+  margin-left:1%;
+}
+
+.mo-select-app-margin1 {
+  margin-left:7%;
+}
+
+li.disabled{
+  pointer-events: none;
+}
+
+.mo-note-oidc{
+  font-size: small;
+  color: red;
+}
+
+.mo-guides-floating{
+  float: right;
+}
+
+.mo-mapping-floating{
+  width: 110%;
+}
+
+.mo-callback {
+  margin-right: 2%;
+}
+
+.mo-table_app1 {
+  text-align: right;
+}
+
+.mo-table-button-center {
+  text-align: center;
+}
+
+.mo-apps-table-text{
+  font-weight: bold;
+}
+
+.mo-apps-attribute-list{
+  overflow-x: auto;
+}
+
+.mo_oauth_client_license_expiry{
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 15px;
+  color: darkgreen;
+  background-color: lightgreen;
+  padding: 5px;
+}
+
+.selected-text, .selected-text>*{
+  background: #2196f3;
+  color: #ffffff;
+}
+
+.mo_oauth_client_how_to_setup{
+	font-size: 0.9em !important;
+	float: right;
+	margin-right: 3%;
+}
+
+.mo_pro_tooltip{
+	visibility: hidden;
+	width: 60%;
+	background-color: #e0e0e0;
+	border: groove;
+	color: black;
+	font-size: 84%;
+	text-align: center;
+	border-radius: 6px;
+	padding: 1%;
+	position: absolute;
+	z-index: 1;
+	bottom: 150%;
+	margin-left: -9%;
+}
+
+.mo_oauth_pro_icon1:hover+.mo_pro_tooltip {
+	visibility: visible;
+	opacity: 1;
+}
+
+table.mo_how_to_upgrade td{
+	border: groove;
+	width: 50% !important;
+}
+
+table.mo_how_to_upgrade th{
+	text-align: center;
+	font-size: larger;
+}
+
+table.mo_upgrade_plans_features td{
+	border: groove;
+	text-align: center;
+	height: 2em;
+	font-weight: 600;
+	width: 25% !important;
+}
+
+table.mo_upgrade_plans_features td+td, table.mo_upgrade_plans_features td+td+td, table.mo_upgrade_plans_features td+td+td+td {
+	border: groove;
+	text-align: center;
+	width: 13% !important;
+}
+
+.mo_oauth_pricing-rate {
+	font-size: 250%;
+	font-weight: 600;
+	position: relative;
+	text-align: center;
+}
+
+table.mo_upgrade_plans_features tbody>:nth-child(1){
+	color: white !important;
+	background-color: #34495e !important;
+}
+
+table.mo_upgrade_plans_features tbody>:nth-child(1):hover{
+	color: white !important;
+	background-color: #34495e !important;
+}
+
+table.mo_upgrade_plans_features tbody>:nth-child(odd){
+	background-color: lightgray;
+}
+
+table.mo_upgrade_plans_features tbody>:nth-child(odd):hover{
+	background-color: lightgray;
+}
+
+.mo_upgrade_plans_features, .mo_how_to_upgrade {
+	margin: 0 1em !important;
+	width: auto;
+}
+
+.mo_instance_note{
+	margin: 0 1em;
+}
+

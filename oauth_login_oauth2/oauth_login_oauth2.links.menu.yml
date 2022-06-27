@@ -1,0 +1,35 @@
+oauth_login_oauth2.config_clc:
+  route_name: oauth_login_oauth2.config_clc
+  title: 'miniOrange OAuth/OIDC Login Configuration'
+  description: 'This module allows you to login in your Drupal site using any OAuth or OpenID Connect compliant server.'
+  parent: user.admin_index
+
+oauth_login_oauth2.customer_setup:
+  route_name: oauth_login_oauth2.customer_setup
+  title: 'Register/Login'
+  description: 'Register/Login Tab'
+  parent: oauth_login_oauth2.config_clc
+
+oauth_login_oauth2.mapping:
+  route_name: oauth_login_oauth2.mapping
+  title: 'Attribute & Role Mapping'
+  description: 'Attribute & Role Mapping Tab'
+  parent: oauth_login_oauth2.config_clc
+
+oauth_login_oauth2.settings:
+  route_name: oauth_login_oauth2.settings
+  title: 'Sign In Settings'
+  description: 'Sign In Settings Tab'
+  parent: oauth_login_oauth2.config_clc
+
+oauth_login_oauth2.login_reports:
+  route_name: oauth_login_oauth2.login_reports
+  title: 'Login Reports'
+  description: 'Login Reports Tab'
+  parent: oauth_login_oauth2.config_clc
+
+oauth_login_oauth2.troubleshoot:
+  route_name: oauth_login_oauth2.troubleshoot
+  title: 'Troubleshoot'
+  description: 'Troubleshoot Tab'
+  parent: oauth_login_oauth2.config_clc
