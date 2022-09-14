@@ -3,8 +3,11 @@
 namespace Drupal\user_provisioning\ProviderSpecific\Factory;
 
 use Drupal\user_provisioning\moUserProvisioningConstants;
+use Drupal\user_provisioning\ProviderSpecific\APIHandler\UserAPIHandler\moUserAzureAPIHandler;
 use Drupal\user_provisioning\ProviderSpecific\APIHandler\UserAPIHandler\moUserSCIMAPIHandler;
+use Drupal\user_provisioning\ProviderSpecific\Parsers\UserParser\moUserAzureParser;
 use Drupal\user_provisioning\ProviderSpecific\Parsers\UserParser\moUserSCIMParser;
+use Drupal\user_provisioning\ProviderSpecific\ResponseProcessor\UserResponseProcessor\moUserAzureResponseProcessor;
 use Drupal\user_provisioning\ProviderSpecific\ResponseProcessor\UserResponseProcessor\moUserSCIMResponseProcessor;
 
 class moUserFactory implements moResourceFactoryInterface
@@ -28,6 +31,8 @@ class moUserFactory implements moResourceFactoryInterface
     {
         if ($this->app_name == moUserProvisioningConstants::DEFAULT_APP) {
             return new moUserSCIMAPIHandler();
+        }else if($this->app_name == moUserProvisioningConstants::AZURE_AD){
+            return new moUserAzureAPIHandler();
         }
     }
 
@@ -38,6 +43,8 @@ class moUserFactory implements moResourceFactoryInterface
     {
         if ($this->app_name == moUserProvisioningConstants::DEFAULT_APP) {
             return new moUserSCIMParser();
+        }else if($this->app_name == moUserProvisioningConstants::AZURE_AD){
+            return new moUserAzureParser();
         }
     }
 
@@ -48,6 +55,8 @@ class moUserFactory implements moResourceFactoryInterface
     {
         if ($this->app_name == moUserProvisioningConstants::DEFAULT_APP) {
             return new moUserSCIMResponseProcessor();
+        }else if($this->app_name == moUserProvisioningConstants::AZURE_AD){
+            return new moUserAzureResponseProcessor();
         }
     }
 

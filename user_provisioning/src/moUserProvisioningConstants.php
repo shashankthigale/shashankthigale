@@ -59,8 +59,14 @@ class moUserProvisioningConstants
     const SCIM_CONFLICT = 1;
     const SCIM_CONFLICT_UNDETERMINED = 2;
 
+    //Handling provider specific conflict: Azure AD
+    const AZURE_NO_CONFLICT = 0;
+    const AZURE_CONFLICT = 1;
+    const AZURE_CONFLICT_UNDETERMINED = 2;
+
     //application names
     const DEFAULT_APP = 'default_scim';
+    const AZURE_AD = 'azure_ad';
 
     //setup guide links
     const WORDPRESS_GUIDE = 'https://www.drupal.org/docs/contributed-modules/user-sync-provisioning-in-drupal/sync-provision-drupal-to-other-applications/wordpress-as-scim-server';
