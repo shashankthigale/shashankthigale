@@ -1,0 +1,343 @@
+.mo_user_provisioning_table_layout {
+    background-color: #e0e0d8;
+    width: 98%;
+    padding: 1%;
+    overflow: hidden;
+}
+
+.mo_user_provisioning_table_layout_setup_guide {
+    background-color:#FFFFFF;
+    border:1px solid #CCCCCC;
+    padding:0px 10px 10px 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+
+.mo_user_provisioning_container {
+    padding: 2%;
+    width: 60%;
+    float: left;
+    border-radius: 2px;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+
+.mo_user_provisioning_container_2{
+    width: 30%;
+    padding: 2%;
+    border-radius: 4px; !important;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    margin-left: 20px;
+    margin-right: auto;
+    float: left;
+}
+
+.mo_user_provisioning_text_center{
+  text-align: center;
+}
+
+.mo_user_provisioning_container_user_provisioning_tab {
+    padding: 2%;
+    width: 60%;
+    float: left;
+    border-radius: 2px;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+/** CSS for tab headings */
+.mo_user_provisioning_tab_heading {
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-bottom: 0.4%;
+}
+
+.mo_user_provisioning_full_screen_container {
+    width: 96% !important;
+}
+
+.mo_user_provisioning_inline_wrapper {
+    display: flex;
+    width: auto;
+
+}
+
+.mo_user_provisioning_wrap {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 98%;
+}
+
+.mo_user_provisioning_flex_container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    border: none;
+}
+
+
+.mo_user_provisioning_flex_item {
+    border: 1px solid #ddd;
+    background-color: #f6f6f6;
+    padding: 1% 0 1% 0;
+    display: inline-block;
+    width: 17%;
+    text-align: center;
+    vertical-align: middle;
+    margin: 2%;
+    cursor: pointer;
+}
+
+.mo_user_provisioning_flex_item:hover {
+    border: 2px solid black;
+}
+
+.mo_user_provisioning_img_logo {
+    width: 5em;
+    height: 5em;
+    object-fit: contain;
+}
+
+li.disabled {
+    cursor: not-allowed;
+}
+
+.mo_user_provisioning_search_provider {
+    margin-left: 1%;
+}
+
+table#user_provisioning_headers td {
+    border: 1px solid #bfbfbf;
+    text-align: center !important;
+    background: rgba(242, 242, 240, 0.7);
+}
+
+table#user_provisioning_headers td:hover {
+    background: white;
+}
+
+table#user_provisioning_headers td a {
+    display: block;
+    width: 100%;
+}
+
+.border_fill {
+    border-collapse: collapse !important;
+    width: 60% !important;
+    margin: 0 0 0 2em !important;
+}
+
+/** CSS for SCIM CLIENT tab */
+.scim_client_know_more_hidden{
+    visibility: hidden;
+    width: 80%;
+    background-color: #ffffff;
+    border: groove;
+    color: black;
+    font-size: 84%;
+    text-align: center;
+    border-radius: 6px;
+    padding: 1%;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    margin-left: -9%;
+
+}
+
+.scim_client_know_more:hover + .scim_client_know_more_hidden{
+    visibility: visible;
+    opacity: 1;
+}
+
+/** CSS for SCIM SERVER tab */
+.mo_user_provisioning_tab_sub_heading {
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.mo_user_provisioning_background_note {
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    padding: 0.55em;
+    width: 98%;
+}
+
+.mo_user_provisioning_upgrade_background_note {
+    background-color: black;
+    color: white;
+    padding: 0.55em;
+    text-align: center;
+}
+
+.mo_user_provisioning_scim_header{
+    font-size: 1.3em;
+}
+
+.mo_user_provisioning_inline{
+    display: flex;
+}
+
+.mo_user_provisioning_left_margin{
+    margin-left: auto;
+}
+
+/** CSS for Provider Specific tab */
+.mo_user_provisioning_under_disabled{
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.mo_user_provisioning_pro_icon{
+    float: right;
+    height: 25%;
+    margin: -5% 3% 0 0;
+    width: 21%;
+}
+
+/** Audits and Logs css*/
+.mo_user_provisioning_same_line_div{
+    float:left;
+    padding: 0.5em 1em 0 0;
+    margin-bottom: auto;
+}
+
+.mo_user_provisioning_right_container{
+    width: 29%;
+    padding: 2% !important;
+    border-radius: 4px !important;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0, 0, 0.23);
+    margin-right: auto;
+    float: right;
+    margin-left: 1%;
+}
+
+.mo_user_provisioning_right_table_layout{
+    width: 30%;
+    background-color:#FFFFFF;
+    border:1px solid #CCCCCC;
+    padding:0px 10px 10px 10px;
+    margin-bottom: 10px;
+}
+
+
+
+.mo_user_provisioning_table_layout_upgrade{
+    background-color: #f5f5f5 !important;
+}
+
+.mo_user_provisioning_welcome_message{
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 15px;
+    color: rgba(0, 128, 0, 0.80);
+    background-color: rgba(0, 255, 0, 0.15);
+    padding: 5px;
+}
+
+.mo_user_provisioning_highlight_background{
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    padding: 0.55em;
+    margin: 0 1em;
+    width: 97%;
+}
+
+.user_provisioning_pricing_rate{
+    font-size: 250%;
+    font-weight: 600;
+    position: relative;
+    text-align: center;
+}
+
+table.mo_how_to_upgrade td{
+    border: groove;
+    width: 50% !important;
+}
+
+table.mo_how_to_upgrade th{
+    text-align: center;
+    font-size: larger;
+    border: groove;
+}
+
+table.mo_upgrade_plans_features td{
+    box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px;
+    text-align: center;
+    height: 2em;
+    width: 15% !important;
+    font-size: initial;
+}
+
+table.mo_upgrade_plans_features tbody>tr:first-child>td{
+    border-radius: 15px 15px 0 0;
+}
+
+table.mo_upgrade_plans_features tbody>tr:last-child>td{
+    border-radius: 0 0 15px 15px;
+}
+
+table.mo_upgrade_plans_features tbody>:nth-child(2){
+    color: white !important;
+    background-color: black !important;
+}
+
+.mo_upgrade_plans_features, .mo_how_to_upgrade {
+    margin: 0 1em !important;
+    width: auto;
+}
+
+.mo_user_provisioning_customer_button{
+    float: right;
+}
+
+.mo_user_prov_feature_table{
+    border-collapse: separate;
+    border-spacing: 4em 0;
+}
+
+.mo_user_provisioning_feature_list{
+    text-align: left;
+    margin: 0 2em;
+}
+
+.mo_user_prov_checkmark{
+    color: forestgreen;
+    font-size: larger;
+    font-weight: 600;
+}
+
+table.mo_upgrade_plans_features ul {
+    list-style: none;
+    padding-left: 0;
+}
+table.mo_upgrade_plans_features li {
+    position: relative;
+    padding-left: 1.5em;  /* space to preserve indentation on wrap */
+    padding-bottom: 1em;
+}
+table.mo_upgrade_plans_features li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    width: 1em;
+    height: 2em;
+    color: forestgreen;
+    font-size: larger;
+    font-weight: 600;
+}
+
+table.setup_guides td, thead th{
+    text-align: center;
+}
+

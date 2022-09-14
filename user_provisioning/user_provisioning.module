@@ -1,0 +1,24 @@
+<?php
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\user_provisioning\moUserProvisioningOperationsHandler;
+
+/**
+ * Implements hook_entity_insert().
+ */
+function user_provisioning_entity_insert(EntityInterface $entity)
+{
+    //Need to add this check because while uploading the profile picture, it breaks the flow.
+    if ($entity->bundle() == 'user') {
+        $config = \Drupal::config('user_provisioning.settings');
+        if ($config->get('mo_user_provisioning_scim_client_enable_api_integration') == true && $config->get('mo_user_provisioning_create_user') == true && $config->get('event_based_provisioning') == true) {
+            $operation_handler = new moUserProvisioningOperationsHandler($entity);
+            try {
+                $response = $operation_handler->insert();
+            } catch (Exception $exception) {
+                //TODO Add this operation in the Queue to performed on cron or scheduler
+                \Drupal::logger('user_provisioning')->error($exception->getMessage());
+            }
+        }
+    }
+}
