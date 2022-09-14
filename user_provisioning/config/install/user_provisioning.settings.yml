@@ -1,0 +1,7 @@
+mo_user_provisioning_scim_client_enable_api_integration: true
+mo_user_provisioning_scim_server_base_url: ''
+mo_user_provisioning_scim_server_bearer_token: ''
+mo_user_provisioning_create_user: true
+mo_audits_and_logs_no_of_rows: 10
+mo_user_provisioning_app_name: ''
+event_based_provisioning: true

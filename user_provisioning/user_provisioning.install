@@ -1,0 +1,92 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function user_provisioning_schema()
+{
+    $schema['mo_user_provisioning_users'] = array(
+        'description' => t('User relationship between scim client and server entity'),
+        'fields' => array(
+            'uid' => array(
+                'description' => 'The {users}.uid this record affects.',
+                'type' => 'int',
+                'unsigned' => TRUE,
+                'not null' => TRUE,
+                'default' => 0,
+            ),
+            'id' => array(
+                'description' => t('Returned id of the resource from the SCIM SERVER'),
+                'type' => 'varchar',
+                'length' => 128,
+                'not null' => TRUE,
+                'default' => '',
+            ),
+        ),
+        'foreign keys' => array(
+            'data_user' => array(
+                'table' => 'users',
+                'columns' => array(
+                    'uid' => 'uid',
+                ),
+            ),
+        ),
+    );
+
+    $schema['mo_user_provisioning_audits_and_logs'] = array(
+        'description' => t('Audits and logs information of the provisioning operations'),
+        'fields' => array(
+            'uid' => array(
+                'description' => 'The {users}.uid this record affects.',
+                'type' => 'int',
+                'unsigned' => TRUE,
+                'not null' => TRUE,
+                'default' => 0,
+            ),
+            'name' => array(
+                'description' => 'The name of the entity.',
+                'type' => 'varchar_ascii',
+                'length' => 128,
+                'not null' => TRUE,
+                'default' => '',
+            ),
+            'created' => array(
+                'description' => 'The Unix timestamp when the operation was executed.',
+                'type' => 'int',
+                'unsigned' => TRUE,
+                'not null' => TRUE,
+                'default' => 0,
+            ),
+            'operation' => array(
+                'description' => 'The operation type.',
+                'type' => 'varchar_ascii',
+                'length' => 128,
+                'not null' => TRUE,
+                'default' => '',
+            ),
+            'status' => array(
+                'description' => 'The status of the operation.',
+                'type' => 'varchar_ascii',
+                'length' => 128,
+                'not null' => TRUE,
+                'default' => '',
+            ),
+            /*'description' => array(
+                'description' => 'The details of the performed operation.',
+                'type' => 'longtext',
+                'not null' => TRUE,
+                'default' => '',
+            ),*/
+        ),
+        'foreign keys' => array(
+            'data_user' => array(
+                'table' => 'users',
+                'columns' => array(
+                    'uid' => 'uid',
+                ),
+            ),
+        ),
+    );
+
+    return $schema;
+}

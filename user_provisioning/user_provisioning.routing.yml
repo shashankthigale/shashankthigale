@@ -1,0 +1,89 @@
+user_provisioning.overview:
+    path: /admin/config/people/user_provisioning/overview
+    defaults:
+        _title: 'miniOrange User Provisioning &nbsp;&nbsp;&nbsp; <a class="button button--primary js-form-submit form-submit use-ajax mo_top_bar_button" href="requestTrial">Request 7-days trial</a><a class="button button--primary js-form-submit form-submit use-ajax mo_top_bar_button" href="requestSupport">Contact Us</a>'
+        _form: \Drupal\user_provisioning\Form\MoOverview
+    requirements:
+        _permission: 'administer site configuration'
+
+user_provisioning.user_provisioning:
+    path: /admin/config/people/user_provisioning/user_provisioning
+    defaults:
+        _title: 'miniOrange User Provisioning &nbsp;&nbsp;&nbsp; <a class="button button--primary js-form-submit form-submit use-ajax mo_top_bar_button" href="requestTrial">Request 7-days trial</a><a class="button button--primary js-form-submit form-submit use-ajax mo_top_bar_button" href="requestSupport">Contact Us</a>'
+        _form: \Drupal\user_provisioning\Form\MoUserProvisioning
+    requirements:
+        _permission: 'administer site configuration'
+
+user_provisioning.audits_and_logs:
+    path: /admin/config/people/user_provisioning/audits_and_logs
+    defaults:
+        _title: 'miniOrange User Provisioning &nbsp;&nbsp;&nbsp; <a class="button button--primary js-form-submit form-submit use-ajax mo_top_bar_button" href="requestTrial">Request 7-days trial</a><a class="button button--primary js-form-submit form-submit use-ajax mo_top_bar_button" href="requestSupport">Contact Us</a>'
+        _form: \Drupal\user_provisioning\Form\MoAuditsAndLogs
+    requirements:
+        _permission: 'administer site configuration'
+
+user_provisioning.advanced_settings:
+    path: /admin/config/people/user_provisioning/advanced_settings
+    defaults:
+        _title: 'miniOrange User Provisioning &nbsp;&nbsp;&nbsp; <a class="button button--primary js-form-submit form-submit use-ajax mo_top_bar_button" href="requestTrial">Request 7-days trial</a><a class="button button--primary js-form-submit form-submit use-ajax mo_top_bar_button" href="requestSupport">Contact Us</a>'
+        _form: \Drupal\user_provisioning\Form\MoAdvancedSettings
+    requirements:
+        _permission: 'administer site configuration'
+
+user_provisioning.upgrade_plans:
+    path: /admin/config/people/user_provisioning/upgrade_plans
+    defaults:
+        _title: 'miniOrange User Provisioning &nbsp;&nbsp;&nbsp; <a class="button button--primary js-form-submit form-submit use-ajax mo_top_bar_button" href="requestTrial">Request 7-days trial</a><a class="button button--primary js-form-submit form-submit use-ajax mo_top_bar_button" href="requestSupport">Contact Us</a>'
+        _form: \Drupal\user_provisioning\Form\MoUpgradePlans
+    requirements:
+        _permission: 'administer site configuration'
+
+user_provisioning.customer_setup:
+    path: /admin/config/people/user_provisioning/customer_setup
+    defaults:
+        _title: 'miniOrange User Provisioning &nbsp;&nbsp;&nbsp; <a class="button button--primary js-form-submit form-submit use-ajax mo_top_bar_button" href="requestTrial">Request 7-days trial</a><a class="button button--primary js-form-submit form-submit use-ajax mo_top_bar_button" href="requestSupport">Contact Us</a>'
+        _form: \Drupal\user_provisioning\Form\MoUserProvisioningCustomerSetup
+    requirements:
+        _permission: 'administer site configuration'
+
+#Route for auto-completion of the On-demand provisioning field
+user_provisioning.autocomplete:
+    path: /admin/config/people/user_provisioning/user_provisioning/autoComplete
+    defaults:
+        _controller: \Drupal\user_provisioning\Controller\user_provisioningController::handleAutocomplete
+        _format: json
+    requirements:
+        _permission: 'access content'
+
+user_provisioning.export:
+    path: /admin/config/people/user_provisioning/MoUserProvisioningUserExport
+    defaults:
+        _title: 'miniOrange User Provisioning'
+        _form: \Drupal\user_provisioning\Form\MoUserProvisioningUserExport
+    requirements:
+        _permission: 'administer site configuration'
+
+user_provisioning.export_users:
+    path: /user_provisioning/export_users
+    defaults:
+        _controller: '\Drupal\user_provisioning\Controller\user_provisioningController::exportUsers'
+    requirements:
+        _permission: 'administer site configuration'
+
+#Route for Trial Request
+user_provisioning.request_trial:
+    path: /admin/config/people/user_provisioning/requestTrial
+    defaults:
+        _title: 'miniOrange User Provisioning Request Trial'
+        _controller: '\Drupal\user_provisioning\Controller\user_provisioningController::openTrialRequestForm'
+    requirements:
+        _permission: 'administer site configuration'
+
+#Route for Support Request/Contact Us
+user_provisioning.request_support:
+    path: /admin/config/people/user_provisioning/requestSupport
+    defaults:
+        _title: 'miniOrange User Provisioning Request Support'
+        _controller: '\Drupal\user_provisioning\Controller\user_provisioningController::openSupportRequestForm'
+    requirements:
+        _permission: 'administer site configuration'

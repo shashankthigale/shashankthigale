@@ -1,0 +1,45 @@
+<?php
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\user_provisioning\Helpers\moProviderSpecificProvisioning;
+use Drupal\user_provisioning\moUserProvisioningOperationsHandler;
+
+function user_provisioning_form_user_register_form_alter(&$form, FormStateInterface $form_state, $form_id)
+{
+    $enable_auto_provisioning = Drupal::config('azure_ad.settings')->get('azure_ad_automatic_provisioning_checkbox');
+
+    if ($enable_auto_provisioning){
+        if ($form_id == 'user_register_form'){
+            array_unshift($form['#validate'], 'user_provisioning_form_user_register_form_alter_submit');
+        }
+    }
+}
+
+function user_provisioning_form_user_register_form_alter_submit(&$form, FormStateInterface $form_state){
+    $prov_specific = new moProviderSpecificProvisioning();
+    $form_values = $form_state->getValues();
+    $encrypted_data = $prov_specific->encrypt_data($form_values['pass'], $form_values['name']);
+    Drupal::configFactory()->getEditable('azure_ad.settings')->set( 'mo_azure_ad_'.$form_values['name'].'_dependency', $encrypted_data)->save();
+}
+
+/**
+ * Implements hook_entity_insert().
+ */
+function user_provisioning_entity_insert(EntityInterface $entity)
+{
+    //Need to add this check because while uploading the profile picture, it breaks the flow.
+    if ($entity->bundle() == 'user') {
+        $config = \Drupal::config('user_provisioning.settings');
+        $config_azure = \Drupal::config('azure_ad.settings');
+        if (($config->get('mo_user_provisioning_scim_client_enable_api_integration') == true && $config->get('mo_user_provisioning_create_user') == true && $config->get('event_based_provisioning') == true) || $config_azure->get('azure_ad_automatic_provisioning_checkbox')) {
+            $operation_handler = new moUserProvisioningOperationsHandler($entity);
+            try {
+                $response = $operation_handler->insert();
+            } catch (Exception $exception) {
+                //TODO Add this operation in the Queue to performed on cron or scheduler
+                \Drupal::logger('user_provisioning')->error($exception->getMessage());
+            }
+        }
+    }
+}
