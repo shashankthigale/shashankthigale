@@ -1,9 +1,0 @@
-name: miniOrange User Provisioning
-description: 'This module provides user provisioning and de-provisioning.'
-core_version_requirement: ^8 || ^9
-package: User Provisioning
-type: module
-configure: user_provisioning.overview
-core: 8.x
-project: 'user_provisioning'
-version: 8.x-1.0
